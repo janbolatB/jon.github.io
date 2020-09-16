@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		 body{
+        background: url(../images/img1.JPG) center center / cover no-repeat;
+        width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+      }
+	</style>
+</head>
+<body>
+	<button onclick="goBack()">Go Back</button>
+<button onclick="play('даавуу')">даавуу</button>
+<button onclick="play('хайч')">хайч</button>
+<button onclick="play('чулуу')">чулуу</button>
+<p id="result" style="background: rgba(255,255,255,.8);"></p>
+<script>
+	function play(argument) {
+
+		var randomNumber = Math.floor(Math.random() * 3)
+		var myString = 'com: '
+		if (randomNumber == 0) {
+			myString += 'чулуу'
+			
+		}
+		
+		else if (randomNumber == 1) 
+			myString += 'хайч'
+			
+		else if (randomNumber == 2) 
+			myString += 'даавуу'
+			
+		myString += ' me: ' + argument
+		document.getElementById('result').innerHTML = myString
+		
+	}
+	function goBack() {
+		  window.history.back();
+		}
+</script>
+
+</body>
+</html>
